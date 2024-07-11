@@ -18,10 +18,16 @@ public class CountryService {
         return countryRepository.findAll();
     }
 
+    public List<Country> findAll() {
+        return countryRepository.findAll();
+    }
+
     //Save new country
     public void save(Country country){
         countryRepository.save(country);
     }
+
+
 
     //Get by id
     public Optional<Country> findById(int id){

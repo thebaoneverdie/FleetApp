@@ -30,5 +30,6 @@ public class State {
 	private Integer countryid;
 	
 	private String details;
+
 	
 }
