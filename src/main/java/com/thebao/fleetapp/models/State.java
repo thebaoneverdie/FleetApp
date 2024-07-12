@@ -9,6 +9,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Optional;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -31,5 +33,4 @@ public class State {
 	
 	private String details;
 
-	
 }

@@ -16,6 +16,7 @@ $('document').ready(function(){
         $('#editModal').modal();
     });
 
+
     $('table #deleteButton').on('click', function(event){
      event.preventDefault();
 
