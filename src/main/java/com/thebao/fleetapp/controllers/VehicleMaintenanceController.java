@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class VehicleMaintenanceController {
-    @GetMapping("/vehiclemaintenance")
-    public String getVehiclemaintenances(){
+    @GetMapping("/vehicleMaintenances")
+    public String getVehicleMaintenances(){
         return "vehiclemaintenance";
     }
 

@@ -9,7 +9,7 @@ $('document').ready(function() {
 		var href= $(this).attr('href');
 		$.get(href, function(vehicleModel, status){
 			$('#idEdit').val(vehicleModel.id);
-			$('descriptionEdit').val(vehicleModel.description);
+			$('#descriptionEdit').val(vehicleModel.description);
 			$('#detailsEdit').val(vehicleModel.details);
 
 		});

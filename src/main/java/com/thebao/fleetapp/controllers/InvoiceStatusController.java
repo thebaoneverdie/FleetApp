@@ -21,7 +21,7 @@ public class InvoiceStatusController {
         return "invoiceStatus";
     }
 
-    @RequestMapping("invoiceStatus/findById")
+    @RequestMapping("invoiceStatuses/findById")
     @ResponseBody
     public Optional<InvoiceStatus> findById(Integer id)
     {
