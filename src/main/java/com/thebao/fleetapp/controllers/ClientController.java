@@ -15,7 +15,6 @@ import java.util.Optional;
 public class ClientController {
     @Autowired private ClientService clientService;
     @Autowired private CountryService countryService;
-
     @Autowired private StateService stateService;
 
     //Get All Clients
