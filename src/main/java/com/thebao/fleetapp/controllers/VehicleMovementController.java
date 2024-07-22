@@ -23,8 +23,9 @@ public class VehicleMovementController {
     @GetMapping("vehicleMovements")
     public String findAll(Model model){
         model.addAttribute("vehicleMovements", vehicleMovementService.findAll());
-        model.addAttribute("vehicles", vehicleService.getVehicles());
-        model.addAttribute("suppliers", locationService.getLocations());
+        model.addAttribute("locations", locationService.findAll());
+        model.addAttribute("vehicles", vehicleService.findAll());
+
         return "vehicleMovement";
     }
 
