@@ -11,31 +11,31 @@ import java.util.Optional;
 @Service
 public class VehicleService {
     @Autowired
-    private VehicleRepository stateRepository;
+    private VehicleRepository vehicleRepository;
 
     public List<Vehicle> getVehicles(){
-        return stateRepository.findAll();
+        return vehicleRepository.findAll();
     }
 
     public List<Vehicle> findAll() {
-        return stateRepository.findAll();
+        return vehicleRepository.findAll();
     }
 
     //Save new country
-    public void save(Vehicle state){
-        stateRepository.save(state);
+    public void save(Vehicle vehicle){
+        vehicleRepository.save(vehicle);
     }
 
     //Get by id
     public Optional<Vehicle> findById(int id){
-        return stateRepository.findById(id);
+        return vehicleRepository.findById(id);
     }
 
-    public void update(Vehicle state) {
-        stateRepository.save(state);
+    public void update(Vehicle vehicle) {
+        vehicleRepository.save(vehicle);
     }
 
     public void deleteById(Integer id){
-        stateRepository.deleteById(id);
+        vehicleRepository.deleteById(id);
     }
 }
