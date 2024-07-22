@@ -1,9 +1,7 @@
 package com.thebao.fleetapp.controllers;
 
 import com.thebao.fleetapp.models.Vehicle;
-import com.thebao.fleetapp.services.VehicleService;
-import com.thebao.fleetapp.services.CountryService;
-import com.thebao.fleetapp.services.StateService;
+import com.thebao.fleetapp.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,17 +11,25 @@ import java.util.Optional;
 
 @Controller
 public class VehicleController {
-    @Autowired
-    private VehicleService vehicleService;
-    @Autowired private CountryService countryService;
-    @Autowired private StateService stateService;
+    @Autowired private VehicleService vehicleService;
+    @Autowired private VehicleTypeService vehicleTypeService;
+    @Autowired private VehicleMakeService vehicleMakeService;
+    @Autowired private VehicleModelService vehicleModelService;
+    @Autowired private LocationService locationService;
+    @Autowired private EmployeeService employeeService ;
+    @Autowired private VehicleStatusService vehicleStatusService;
 
     //Get All Vehicles
     @GetMapping("vehicles")
     public String findAll(Model model){
         model.addAttribute("vehicles", vehicleService.findAll());
-        model.addAttribute("countries", countryService.findAll());
-        model.addAttribute("states", stateService.findAll());
+        model.addAttribute("vehicleTypes", vehicleTypeService.findAll());
+        model.addAttribute("vehicleModels", vehicleModelService.findAll());
+        model.addAttribute("vehicleMakes", vehicleMakeService.findAll());
+        model.addAttribute("locations", locationService.findAll());
+        model.addAttribute("employees", employeeService.findAll());
+        model.addAttribute("vehicleStatuses", vehicleStatusService.findAll());
+
         return "vehicle";
     }
 
